@@ -5,10 +5,15 @@ project (cmake_test)
 set (test_VERSION_MAJOR 1)
 set (test_VERSION_MINOR 0)
 
+include (CheckFunctionExists)
+
 #Should we use our implementation of math functions?
 option(USE_MYMATH
 		"Use test provided math implementation"
 		ON)
+
+check_function_exists(log HAVE_LOG)
+check_function_exists(exp HAVE_EXP)
 
 # configure a header file to pass some of the CMake settings
 # to the source code
@@ -31,6 +36,7 @@ add_executable(test test.cpp)
 target_link_libraries(test ${EXTRA_LIBS})
 
 # add the install targets
-install (TARGETS Tutorial DESTINATION bin)
-install (FILES "${PROJECT_BINARY_DIR}/TutorialConfig.h"        
-         DESTINATION include)
+#install (TARGETS Tutorial DESTINATION bin)
+#install (FILES "${PROJECT_BINARY_DIR}/TutorialConfig.h"
+#         DESTINATION include)
+

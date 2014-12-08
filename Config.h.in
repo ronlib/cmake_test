@@ -5,4 +5,7 @@
 #define test_VERSION_MINOR @test_VERSION_MINOR@
 #cmakedefine USE_MYMATH
 
+#cmakedefine HAVE_LOG
+#cmakedefine HAVE_EXP
+
 #endif //_CONFIG_H
