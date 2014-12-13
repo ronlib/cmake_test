@@ -1,6 +1,8 @@
 cmake_minimum_required(VERSION 2.6)
 project (cmake_test)
 
+set (VERBOSE 1)
+
 # The version number.
 set (test_VERSION_MAJOR 1)
 set (test_VERSION_MINOR 0)
